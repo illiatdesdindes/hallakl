@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120809155033) do
+ActiveRecord::Schema.define(:version => 20120817182636) do
+
+  create_table "shops", :force => true do |t|
+    t.string   "name"
+    t.string   "shopname"
+    t.string   "description"
+    t.text     "adress"
+    t.text     "info"
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "shops", ["shopname"], :name => "index_shops_on_shopname", :unique => true
+  add_index "shops", ["user_id"], :name => "index_shops_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
