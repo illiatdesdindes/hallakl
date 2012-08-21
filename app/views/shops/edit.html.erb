@@ -1,0 +1,23 @@
+<h1>Modifier les informations de votre Etablissement</h1>
+<%= render 'shared/error_messages', object: @shop %>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= simple_form_for(@shop, :html => {:class => 'form-vertical' }) do |f| %>
+      <%= f.input :name, label: "Nom de l'Etablissement",
+                         placeholder: 'Mon Snack'  %>
+      <%= f.input :shopname, label: 'Identifiant',
+                             placeholder: 'mon-snack',
+                             hint: 'hallakl.com/mon-snack' %>
+      <%= f.input :description, :as => :text,
+                                placeholder: 'Les meilleurs sandwichs au coin de la rue',
+                                :input_html => {:rows => 3 }%>
+      <%= f.input :adress, :input_html => {:rows => 3 },
+                           label: 'Adresse' %>
+      <%= f.input :info, :input_html => {:rows => 4 },
+                         label: 'Informations complementaires',
+                         placeholder: 'Horraires, etc ...' %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

@@ -111,6 +111,21 @@ footer {
 
 /* sidebar */
 
+.user_shops {
+  border:1px solid $grayLighter;
+  font-size:75%;
+  padding:10px;
+  text-align: left;
+  h1 {
+    //font-size: 1.6em;
+    text-align: left;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+  }
+  h2 {
+    text-align: left;
+  }
+}
 
 .shop_front {
   padding: 10px 0;
@@ -128,6 +143,9 @@ footer {
     text-align: left;
     letter-spacing: -1px;
     margin-bottom: 3px;
+  }
+  h2 {
+    text-align: left;
   }
   .shop_info {
     clear:both;
@@ -167,6 +185,12 @@ footer {
 
 
 /* forms */
+
+.help-block {
+  text-align:center;
+  color:$grayLight;
+  font:italic 1em Georgia,"Times New Roman",serif;
+}
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;

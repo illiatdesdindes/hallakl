@@ -2,11 +2,13 @@
 
 <div class="row">
   <section class="span8 shop_front">
-    <%= render 'shop_info' %>
+    <%= render 'shop_info', shop: @shop %>
     
   </section>
   <section class="span4">
     <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{u(@shop.adress)}&zoom=17&size=400x400&sensor=false&markers=#{u(@shop.adress)}" %>
   </section>
 </div>
-
+<div class="row">
+  <%= link_to "Editer l'Etablissement", edit_shop_path(@shop), class: 'btn' %>
+</div>

@@ -16,7 +16,7 @@
                 <li><%= link_to "Ma page", user_path(current_user) %></li>
                 <li><%= link_to "Options", edit_user_registration_path(current_user) %></li>
                 <% if current_user.has_shop? %>
-                  <%= link_to "Mon Magasin", shop_path(current_user.shop) %></li>
+                  <%= link_to "Mon Magasin", shop_path(current_user.shops.first) %></li>
                 <% end %>
                 <li class="divider"></li>
                 <li>

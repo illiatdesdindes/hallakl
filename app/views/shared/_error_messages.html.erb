@@ -1,0 +1,12 @@
+<% if object.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-error">
+      Le Formulaire contient <%= pluralize(object.errors.count, "erreur") %>.
+    </div>
+    <% if object.errors[:base].present? %>
+      <div class="alert alert-error">
+        <%= object.errors[:base].first  %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
