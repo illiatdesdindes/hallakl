@@ -11,14 +11,14 @@ describe "StaticPages" do
   
   describe "Help page" do
     before {visit help_path}
-    it {should have_content 'Help' }
+    it {should have_selector "h1", text: "Aide" }
   end
   
   it "should have the right link on the layout" do
     visit root_path
-    click_link 'Help'
-    page.should have_content "Help"
-    click_link "Home"
+    click_link 'Aide'
+    page.should have_selector "h1", text: "Aide"
+    click_link "Accueil"
     page.should have_content "Welcome"
     click_link "Hallakl"
     page.should have_content "Welcome"

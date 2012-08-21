@@ -38,7 +38,7 @@ describe "UserPages" do
         end
       
         it { should have_selector('div.alert', text: 'Welcome') }
-        it { should have_link('Sign out') }
+        it { should have_link("connection") }
       
 #        describe "Email confirmation" do
 #          let(:mail_confirmation) { ActionMailer::Base.deliveries.first }
