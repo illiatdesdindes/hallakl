@@ -214,11 +214,14 @@ input, textarea, select, .uneditable-input {
   @extend .error;
  }
  
-/* users index */
+/* shops index */
 
-.users {
+.shops {
   list-style: none;
   margin: 0;
+  h4 {
+    color:$grayLight;
+  }
   li {
     overflow: auto;
     padding: 10px 0;

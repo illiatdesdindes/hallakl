@@ -1,9 +1,10 @@
 <h1>Profile de:</h1>
 <h2><i><%=@user.email%></i></h2>
 <% if @user.has_shop? %>
-  <div class="user_shops">
-    <%= render 'shops/shop_info', shop: @user.shops.first %>
-  </div>
+  <h3>Votre Snack:</h3>
+  <ul class="shops">
+    <%= render 'shops/shop', shop: @user.shops.first %>
+  </ul>
 <% else %>
   <%= link_to raw("Cr&eacute;ez votre Etablissement") , new_shop_path, class: 'btn btn-primary' %>
 <% end %>

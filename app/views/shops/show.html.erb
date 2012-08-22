@@ -10,5 +10,7 @@
   </section>
 </div>
 <div class="row">
-  <%= link_to "Editer l'Etablissement", edit_shop_path(@shop), class: 'btn' %>
+  <% if user_signed_in? and current_user.own? @shop %>
+    <%= link_to "Modifier mon Snack", edit_shop_path(@shop), class: 'btn' %>
+  <% end %>
 </div>

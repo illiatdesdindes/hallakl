@@ -1,4 +1,12 @@
 class ShopsController < ApplicationController
+
+  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :correct_user, only: [:edit, :update, :destroy]
+  
+  def index
+    @shops = Shop.all
+  end
+  
   def show
     @shop = Shop.find(params[:id])
   end
@@ -30,4 +38,11 @@ class ShopsController < ApplicationController
       render 'edit'
     end
   end
+  
+  private
+  
+    def correct_user
+      @shop = current_user.shops.find_by_id(params[:id])
+      redirect_to root_path if @shop.nil?
+    end
 end

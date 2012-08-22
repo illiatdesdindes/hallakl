@@ -15,7 +15,12 @@ class User < ActiveRecord::Base
   def has_shop?
     shops.any?
   end
+  
   def shop
     shops.first
+  end
+  
+  def own? aShop
+    aShop.user == self
   end
 end

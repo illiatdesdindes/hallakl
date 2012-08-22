@@ -6,6 +6,7 @@
         <ul class="nav pull-right">
           <li><%= link_to "Accueil", root_path %></li>
           <li><%= link_to "Aide", help_path %></li>
+          <li><%= link_to "Snacks", shops_path %></li> 
           <% if user_signed_in? %>
             <li><%= link_to "Utilisateurs", '#' %></li>
             <li id="fat-menu" class="dropdown">
