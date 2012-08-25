@@ -109,7 +109,7 @@ footer {
   }
 }
 
-/* sidebar */
+/* shops */
 
 .user_shops {
   border:1px solid $grayLighter;
@@ -180,8 +180,15 @@ footer {
   }
 }
 
+/* Products  */
 
-
+.thumbnail { 
+  background-color: rgba(0, 0, 0, 0.047);
+  margin-top: 20px;
+  h3 {
+    font-size:24px;
+  }
+}
 
 
 /* forms */
