@@ -5,6 +5,13 @@
       <h3><%= product.name %></h3>
       <p><%= product.description %></p>
       <%= link_to "Commander", '#', class: 'btn btn-primary' %>
+      <% if user_signed_in? and current_user.own? @shop %>
+        <%= link_to "Modifier", edit_product_path(product), class: 'btn' %>
+        <%= link_to "Supprimer", product_path(product), 
+                                 class: 'btn btn-warning',
+                                 method: :delete,
+                                 confirm: "Vous allez supprimer un produit" %>
+      <%end%>
     </div>
   </div>
 </div>

@@ -10,9 +10,12 @@
   </section>
 </div>
 <div class="row">
-  <% if user_signed_in? and current_user.own? @shop %>
-    <%= link_to "Modifier mon Snack", edit_shop_path(@shop), class: 'btn' %>
-  <% end %>
+  <div class="span12">
+    <% if user_signed_in? and current_user.own? @shop %>
+      <%= link_to "Modifier mon Snack", edit_shop_path(@shop), class: 'btn btn-large' %>
+      <%= link_to "Ajouter un produit", new_product_path, class: 'btn btn-primary btn-large' %>
+    <% end %>
+  </div>
 </div>
 
 <div class="row">

@@ -1,0 +1,13 @@
+<h1>Ajouter un produit</h1>
+
+<div class="row">
+  <div class="span6 offset3" >
+    <%= simple_form_for @product do |f| %>
+      <%= f.input :name, label: 'Nom du produit' %>
+      <%= f.input :description, as: :text,
+                                :input_html => {:rows => 3 } %>
+      <%= f.input :price %>
+      <%= f.submit 'Ajouter le produit' %>
+    <%end%>
+  </div>
+</div>

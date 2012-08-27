@@ -5,6 +5,7 @@ Hallakl::Application.routes.draw do
   devise_for :users
   resources :users
   resources :shops
+  resources :products
 
   match '/help', to: "static_pages#help"
   
